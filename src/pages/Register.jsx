@@ -19,31 +19,18 @@ export function Register() {
   //   .then((res) => res.json())
   //   .then((res) => console.log(res));
 
-  const data = {
-    username: 'mandy',
-    email: 'mandy.tsang@hypthon.com',
-    password: 'password',
-  };
-
-  fetch(`${BACKEND_API_BASE}/users`, {
-    method: 'POST',
-    body: JSON.stringify(data),
-    headers: { 'Content-Type': 'appplication/josn' },
-  });
-
   const saveHandle = async () => {
     const data = {
-      username,
-      email,
-      password,
+      username: username,
+      email: email,
+      password: password,
     };
-
-    console.log(`${BACKEND_API_BASE}/users`);
+    console.log(data);
 
     await fetch(`${BACKEND_API_BASE}/users`, {
-      method: 'POST',
-      body: JSON.stringify(data),
       headers: { 'Content-Type': 'appplication/josn' },
+      method: 'POST',
+      body: data,
     });
 
     console.log('okkkkkk');
