@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "backend": "json-server db.json --watch",
+    "backend": "json-server --watch db.json",
     "build": "vite build",
     "preview": "vite preview"
   },

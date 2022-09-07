@@ -30,7 +30,7 @@ export function Register() {
     await fetch(`${BACKEND_API_BASE}/users`, {
       headers: { 'Content-Type': 'appplication/josn' },
       method: 'POST',
-      body: data,
+      body: JSON.stringify(data),
     });
 
     console.log('okkkkkk');
