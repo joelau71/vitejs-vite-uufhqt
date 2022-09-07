@@ -5,6 +5,12 @@
       "username": "joe lau",
       "email": "joe.lau@hypthon.com",
       "password": "password"
+    },
+    {
+      "id": 2,
+      "username": "mandy tsang",
+      "email": "mandy.tsang@hypthon.com",
+      "password": "password"
     }
   ]
 }
