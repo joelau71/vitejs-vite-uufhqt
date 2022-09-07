@@ -89,6 +89,18 @@
       "password": "$2a$10$d4qJ5KAV4wm5HbfBIiTDtOQ9eBwz.Rvam8Bvx.04ONT34ZVpIPrVa",
       "username": "Architecto aperiam c",
       "id": 24
+    },
+    {
+      "email": "tylih@mailinator.com",
+      "password": "$2a$10$cN.AjxRw.SQuj5ACpwwmIukNkGKxHwVLBBpwmxMT5.mBXwZxbm0IK",
+      "username": "Adipisci deserunt qu",
+      "id": 25
+    },
+    {
+      "email": "jujer@mailinator.com",
+      "password": "$2a$10$1Afh2Vt6LshQfsBFHi8BCuCyfK2Yr3wd/E4yshhqxMzE.apwxgJl2",
+      "username": "Dolores in omnis ame",
+      "id": 26
     }
   ]
 }

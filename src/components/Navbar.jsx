@@ -7,7 +7,6 @@ export function NavBar() {
   const locale = i18n.language;
   const { isAuth, setIsAuth } = useContext(AuthContext);
 
-  console.log(isAuth, setIsAuth);
   const [showLanguageTrigger, setShowLanguageTrigger] = useState(false);
   const showLanguageTriggerHandle = () => {
     setShowLanguageTrigger(!showLanguageTrigger);

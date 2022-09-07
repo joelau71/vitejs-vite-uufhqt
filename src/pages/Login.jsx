@@ -14,18 +14,16 @@ export function Login() {
   const locale = i18n.language;
   const { BACKEND_API_BASE } = config;
 
-  console.log(user, setUser);
-
   const loginHandle = () => {
     const data = {
       email,
       password,
     };
-    console.log(data);
-    fetch(BACKEND_API_BASE + '/login', {
+    console.log(data, BACKEND_API_BASE);
+    fetch(`${BACKEND_API_BASE}/login`, {
+      headers: { 'Content-Type': 'application/json' },
       method: 'POST',
       body: JSON.stringify(data),
-      headers: { 'Content-Type': 'appplication/josn' },
     }).then((res) => console.log(res));
     //ignore validate
     // setUser({

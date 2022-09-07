@@ -32,7 +32,9 @@ export function Register() {
       body: JSON.stringify(data),
     });
 
-    console.log(res);
+    const json = await res.json();
+
+    console.log(json);
 
     //ignore validate
     // setUser({
