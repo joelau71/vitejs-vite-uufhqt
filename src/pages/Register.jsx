@@ -15,10 +15,6 @@ export function Register() {
   const locale = i18n.language;
   const { BACKEND_API_BASE } = config;
 
-  // fetch(`${BACKEND_API_BASE}/users`)
-  //   .then((res) => res.json())
-  //   .then((res) => console.log(res));
-
   const saveHandle = async () => {
     const data = {
       username,
@@ -34,18 +30,14 @@ export function Register() {
 
     const json = await res.json();
 
-    console.log(json);
+    const token = json.accessToken;
+    const id = json.user.id;
 
-    //ignore validate
-    // setUser({
-    //   username: username,
-    //   email: email,
-    //   password: password,
-    // });
+    localStorage.setItem('token', JSON.stringify(token));
+    localStorage.setItem('id', JSON.stringify(id));
 
-    //setIsAuth(true);
-
-    //navigate(`/${locale}/dashboard`);
+    setIsAuth(true);
+    navigate(`/${locale}/dashboard`);
   };
   return (
     <div className="containerf px-8 mx-auto">

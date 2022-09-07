@@ -5,6 +5,42 @@
       "password": "$2a$10$xis3my7pLywxx1us3bnxlOBNTsV2PTn6jzCRIrnwBWigQ5NaxyVcW",
       "username": "joe lau",
       "id": 1
+    },
+    {
+      "email": "alex@hypthon.com",
+      "password": "$2a$10$ChwhSLS3spxzoO2h9qX2uudzj3aiADfb6VO5t9Uw0xdD.PqhHvk/6",
+      "username": "alex",
+      "id": 2
+    },
+    {
+      "email": "somililusu@mailinator.com",
+      "password": "$2a$10$Z7okUZMtQQqBWveBsSLr3.1LTSShQ8YB8oF19xjJTkqhk9zBDqaZG",
+      "username": "Deserunt eligendi al",
+      "id": 3
+    },
+    {
+      "email": "kepuf@mailinator.com",
+      "password": "$2a$10$Fh/dk8A.w726RV.vgX/Pp.KY0by3rfRteMvNu0Z0AWfNBnLODmwHS",
+      "username": "Nesciunt est deseru",
+      "id": 4
+    },
+    {
+      "email": "meby@mailinator.com",
+      "password": "$2a$10$j1HJu6kx2U1YtoufnLPzU.7L.0XsfNQhmQxJjLYHxX7x5.1wKFSGe",
+      "username": "Nulla et ipsum imped",
+      "id": 5
+    },
+    {
+      "email": "qisenywu@mailinator.com",
+      "password": "$2a$10$wpka5EVtMtq1n5wR.7vXhu/oCQOEvqfkQh8oUyMKyQ3mEa0qIHGwG",
+      "username": "Ut anim ut et corrup",
+      "id": 6
+    },
+    {
+      "email": "tyrahewazy@mailinator.com",
+      "password": "$2a$10$CaEYgnInEt.APVcerryLu.3sK1n3Wf0fEome5/ulswd5Hxi112W8e",
+      "username": "Quis in quis exercit",
+      "id": 7
     }
   ]
 }

@@ -15,7 +15,7 @@ export function Login() {
   const { BACKEND_API_BASE } = config;
 
   const loginHandle = async () => {
-    const data = {
+    const userData = {
       email,
       password,
     };
@@ -23,18 +23,17 @@ export function Login() {
     const data = await fetch(`${BACKEND_API_BASE}/login`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(data),
+      body: JSON.stringify(userData),
     });
     const json = await data.json();
-      .then((res) => res.json())
-      .then((data) => console.log(data));
-    //ignore validate
-    // setUser({
-    //   email: email,
-    //   password: password,
-    // });
-    // setIsAuth(true);
-    // navigate(`/${locale}/dashboard`);
+    const token = json.accessToken;
+    const id = json.user.id;
+
+    localStorage.setItem('token', JSON.stringify(token));
+    localStorage.setItem('id', JSON.stringify(id));
+
+    setIsAuth(true);
+    navigate(`/${locale}/dashboard`);
   };
   return (
     <div className="containerf px-8 mx-auto">
