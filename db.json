@@ -65,6 +65,30 @@
       "email": "pajypybar@mailinator.com",
       "password": "Pa$$w0rd!",
       "id": 20
+    },
+    {
+      "email": "bohew@mailinator.com",
+      "password": "$2a$10$kxCqeJRchunwCT38PvFCZelplueNmElc4bQNN2VaypwSk0g2WDAn.",
+      "username": "Consectetur laborum",
+      "id": 21
+    },
+    {
+      "email": "ryduvo@mailinator.com",
+      "password": "$2a$10$PIlV2nZJ/0L56GHfddSbhen5zGQXlo6zljB1o/VjDyAV0OEsINi0G",
+      "username": "Eum magna excepturi ",
+      "id": 22
+    },
+    {
+      "email": "qifeliq@mailinator.com",
+      "password": "$2a$10$m91gLCPR8Fey.sZ82IgstOc9819Fphwf6jsTl4uph70kF8ingDHZ6",
+      "username": "Nobis maxime unde su",
+      "id": 23
+    },
+    {
+      "email": "rogub@mailinator.com",
+      "password": "$2a$10$d4qJ5KAV4wm5HbfBIiTDtOQ9eBwz.Rvam8Bvx.04ONT34ZVpIPrVa",
+      "username": "Architecto aperiam c",
+      "id": 24
     }
   ]
 }
