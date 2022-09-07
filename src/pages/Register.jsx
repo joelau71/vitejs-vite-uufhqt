@@ -21,14 +21,14 @@ export function Register() {
 
   const saveHandle = async () => {
     const data = {
-      username: username,
-      email: email,
-      password: password,
+      username,
+      email,
+      password,
     };
     console.log(data);
 
     await fetch(`${BACKEND_API_BASE}/users`, {
-      headers: { 'Content-Type': 'appplication/josn' },
+      headers: { 'Content-Type': 'appplication/json' },
       method: 'POST',
       body: JSON.stringify(data),
     });
