@@ -19,12 +19,14 @@ export function Login() {
       email,
       password,
     };
-    console.log(data, BACKEND_API_BASE);
+
     fetch(`${BACKEND_API_BASE}/login`, {
-      headers: { 'Content-Type': 'application/json' },
       method: 'POST',
-      body: JSON.stringify(data),
-    }).then((res) => console.log(res));
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(formData),
+    })
+      .then((res) => res.json())
+      .then((data) => console.log(data.user));
     //ignore validate
     // setUser({
     //   email: email,
