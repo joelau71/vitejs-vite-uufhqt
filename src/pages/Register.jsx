@@ -25,15 +25,12 @@ export function Register() {
       email,
       password,
     };
-    console.log(data);
 
     await fetch(`${BACKEND_API_BASE}/users`, {
-      headers: { 'Content-Type': 'appplication/json' },
+      headers: { 'Content-Type': 'application/json' },
       method: 'POST',
       body: JSON.stringify(data),
     });
-
-    console.log('okkkkkk');
 
     //ignore validate
     // setUser({
