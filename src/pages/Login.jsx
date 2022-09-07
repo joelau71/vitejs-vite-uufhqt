@@ -14,19 +14,20 @@ export function Login() {
   const locale = i18n.language;
   const { BACKEND_API_BASE } = config;
 
-  const loginHandle = () => {
+  const loginHandle = async () => {
     const data = {
       email,
       password,
     };
 
-    fetch(`${BACKEND_API_BASE}/login`, {
+    const data = await fetch(`${BACKEND_API_BASE}/login`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(formData),
-    })
+      body: JSON.stringify(data),
+    });
+    const json = await data.json();
       .then((res) => res.json())
-      .then((data) => console.log(data.user));
+      .then((data) => console.log(data));
     //ignore validate
     // setUser({
     //   email: email,

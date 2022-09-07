@@ -1,16 +1,10 @@
 {
   "users": [
     {
-      "id": 1,
-      "username": "joe lau",
       "email": "joe.lau@hypthon.com",
-      "password": "password"
-    },
-    {
-      "id": 2,
-      "username": "mandy tsang",
-      "email": "mandy.tsang@hypthon.com",
-      "password": "password"
+      "password": "$2a$10$xis3my7pLywxx1us3bnxlOBNTsV2PTn6jzCRIrnwBWigQ5NaxyVcW",
+      "username": "joe lau",
+      "id": 1
     }
   ]
 }
