@@ -8,6 +8,8 @@ export function Logout() {
   const { user, setUser } = useContext(UserContext);
   const { setIsAuth } = useContext(AuthContext);
   const locale = i18n.language;
+  localStorage.removeItem('token');
+  localStorage.removeItem('id');
   setIsAuth(false);
   setUser(null);
 

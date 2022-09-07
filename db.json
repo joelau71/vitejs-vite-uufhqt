@@ -41,6 +41,12 @@
       "password": "$2a$10$CaEYgnInEt.APVcerryLu.3sK1n3Wf0fEome5/ulswd5Hxi112W8e",
       "username": "Quis in quis exercit",
       "id": 7
+    },
+    {
+      "email": "lyjawat@mailinator.com",
+      "password": "$2a$10$jMfuAr95.WsJ7IiF3XKKMOZOHJBSk3FtX4jC/Tnk99o3rWmfqduWy",
+      "username": "Autem rerum illum m",
+      "id": 8
     }
   ]
 }

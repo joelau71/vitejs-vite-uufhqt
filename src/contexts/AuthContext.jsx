@@ -5,16 +5,34 @@ export const AuthContext = createContext();
 
 export function AuthProvider({ children }) {
   const [isAuth, setIsAuth] = useState(async () => {
+    console.log('run init');
     const token = JSON.parse(localStorage.getItem('token'));
-    if (!token) return false;
+    const id = JSON.parse(localStorage.getItem('id'));
+    let flag = true;
+
+    if (!token || !id) return false;
     const { BACKEND_API_BASE } = config;
-    return true;
-    // const data = await fetch(`${BACKEND_API_BASE}/login`, {
-    //   method: 'GET',
-    //   headers: {
-    //     Authorization: `Bearer ${token}`,
-    //   }
-    // });
+
+    try {
+      const data = await fetch(`${BACKEND_API_BASE}/600/users/${id}`, {
+        method: 'GET',
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
+
+      if (!data.ok) {
+        flag = false;
+        throw '401 Error';
+      }
+      const json = await data.json();
+
+      flag = true;
+    } catch (e) {
+      console.log(e);
+    }
+    console.log(flag);
+    return flag;
   });
 
   const providerAuth = useMemo(
