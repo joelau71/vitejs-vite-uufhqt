@@ -12,32 +12,38 @@ export function Register() {
   const [password, setPassword] = useState('');
   const [username, setUsername] = useState('');
   const navigate = useNavigate();
-  const locale = i18n.language;
   const { BACKEND_API_BASE } = config;
 
   const saveHandle = async () => {
-    const data = {
+    const userData = {
       username,
       email,
       password,
     };
 
-    const res = await fetch(`${BACKEND_API_BASE}/register`, {
-      headers: { 'Content-Type': 'application/json' },
-      method: 'POST',
-      body: JSON.stringify(data),
-    });
+    try {
+      const data = await fetch(`${BACKEND_API_BASE}/register`, {
+        headers: { 'Content-Type': 'application/json' },
+        method: 'POST',
+        body: JSON.stringify(userData),
+      });
 
-    const json = await res.json();
+      if (!data.ok) {
+        throw 'Error......';
+      }
 
-    const token = json.accessToken;
-    const id = json.user.id;
+      const json = await data.json();
+      const token = json.accessToken;
+      const id = json.user.id;
 
-    localStorage.setItem('token', JSON.stringify(token));
-    localStorage.setItem('id', JSON.stringify(id));
+      localStorage.setItem('token', JSON.stringify(token));
+      localStorage.setItem('id', JSON.stringify(id));
 
-    setIsAuth(true);
-    navigate(`/${locale}/dashboard`);
+      setIsAuth(true);
+      navigate('/dashboard');
+    } catch (e) {
+      console.log(e);
+    }
   };
   return (
     <div className="containerf px-8 mx-auto">

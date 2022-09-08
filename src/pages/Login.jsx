@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom';
 import config from '../config';
 import { AuthContext } from '../contexts/AuthContext';
 import { UserContext } from '../contexts/UserContext';
-import i18n from '../i18n';
 
 export function Login() {
   const { user, setUser } = useContext(UserContext);
@@ -11,7 +10,6 @@ export function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
-  const locale = i18n.language;
   const { BACKEND_API_BASE } = config;
 
   const loginHandle = async () => {
@@ -20,20 +18,29 @@ export function Login() {
       password,
     };
 
-    const data = await fetch(`${BACKEND_API_BASE}/login`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(userData),
-    });
-    const json = await data.json();
-    const token = json.accessToken;
-    const id = json.user.id;
+    try {
+      const data = await fetch(`${BACKEND_API_BASE}/login`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(userData),
+      });
 
-    localStorage.setItem('token', JSON.stringify(token));
-    localStorage.setItem('id', JSON.stringify(id));
+      if (!data.ok) {
+        throw '401 Error';
+      }
 
-    setIsAuth(true);
-    navigate(`/${locale}/dashboard`);
+      const json = await data.json();
+      const token = json.accessToken;
+      const id = json.user.id;
+
+      localStorage.setItem('token', JSON.stringify(token));
+      localStorage.setItem('id', JSON.stringify(id));
+
+      setIsAuth(true);
+      navigate('/dashboard');
+    } catch (e) {
+      console.log(e);
+    }
   };
   return (
     <div className="containerf px-8 mx-auto">
